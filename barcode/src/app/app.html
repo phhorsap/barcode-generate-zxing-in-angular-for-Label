@@ -1,7 +1,5 @@
-<svg id="barcode"></svg>
-@for(i of item; track i){
-<div>
-  <h1>Barcode</h1>
-  <svg id="barcode"></svg>
-</div>
+@for (wg of lieferscheine; track wg; let i = $index){
+
+<p>Lieferschein: {{ wg }} - {{ i + 1 }}</p>
+<svg [attr.id]="'barcode-' + i"></svg>
 }
